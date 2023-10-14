@@ -5,7 +5,10 @@ public class patterns{
         pattern3(5);
         pattern4(5);
         pattern5(5);
-        // pattern6(5);
+        pattern6(5);
+        pattern7(5);
+        pattern8(6);
+        pattern9(5);
     }
 
 
@@ -54,7 +57,7 @@ public class patterns{
 
 
      static void pattern5(int n){
-        System.out.println("pattern 5");
+        // System.out.println("pattern 5");
         // Cheap method
         // for(int row=1;row<=n;row++){
         //     for (int col=1;col<=row;col++){
@@ -84,20 +87,78 @@ public class patterns{
             System.out.println();
         }
     }
+
+
+
+    
+    static void pattern6(int n){
+        System.out.println("pattern 6");
     
 
+        for(int row=1;row<2*n;row++){
+            int totalcolsInRow=row>n ? 2*n-row:row;
+            int totalSpaces=n-totalcolsInRow;
+            for(int s=0;s<totalSpaces;s++){
+                System.out.print(" ");
+            }
+            for (int col=1;col<totalcolsInRow;col++){
+                System.out.print("* ");
+            }
+            System.out.println();
+        }
+    }
 
-//     static void pattern6(int n){
-//         System.out.println("pattern 6");
+    static void pattern7(int n){
+        System.out.println("pattern 7");
+    
 
-//         for(int row=n;row>=1;row--){
-//             for (int col=1;col<=row;col++){
-//                 if(row==col){
-//                     System.out.print("* ");
-            
-//             }
-//             System.out.println();
-//         }
-// }
+        for(int row=1;row<n;row++){
+            for(int s=1;s<row;s++){
+                System.out.print(" ");
+            }
+            for(int col=1;col<=n-row;col++){
+                System.out.print("* ");
+            }
+            System.out.println();
+        }}
+
+
+    static void pattern8(int n){
+        System.out.println("pattern 8");
+    
+        for(int row=n;row>=1;row--){
+
+            for(int j=1;j<row;j++){
+                System.out.print(" ");
+            }
+            for(int j=0;j<=n-row;j++){
+                System.out.print("* ");
+            }
+            System.out.println();
+        }
+    }
+
+    public static void pattern9(int n) 
+    { 
+        int i, j; 
+  
+        // outer loop to handle rows 
+        for (i = n; i >= 1; i--) { 
+  
+            // inner loop to print spaces. 
+            for (j = 1; j < i; j++) { 
+                System.out.print(" "); 
+            } 
+  
+            // inner loop to print stars. 
+            for (j = 0; j <= n - i; j++) { 
+                System.out.print("*"); 
+            } 
+  
+            // printing new line for each row 
+            System.out.println(); 
+        } 
+    } 
+
 
 }
