@@ -1,14 +1,15 @@
 public class patterns{
     public static void main(String [] args){
-        pattern1(5);
-        pattern2(5);
-        pattern3(5);
-        pattern4(5);
-        pattern5(5);
-        pattern6(5);
-        pattern7(5);
-        pattern8(6);
-        pattern9(5);
+        // pattern1(5);
+        // pattern2(5);
+        // pattern3(5);
+        // pattern4(5);
+        // pattern5(5);
+        // pattern6(5);
+        // pattern7(5);
+        // pattern8(6);
+        // pattern9(5);
+        pattern30(5);
     }
 
 
@@ -160,5 +161,19 @@ public class patterns{
         } 
     } 
 
-
+    public static void pattern30(int n){
+        for(int row=1;row<=n;row++){
+            for(int space=0;space<n-row;space++){
+                System.out.print(" ");
+            }
+            for(int col=row;col>=1;col--){
+                System.out.print(col);
+            }
+            for(int col=2;col<=row;col++){
+                System.out.print(col);
+            }
+            System.out.println();
+                
+    } 
+}
 }
