@@ -30,7 +30,7 @@ public class Palindrome {
     public static void main(String[] args) {
 //        Rev1(9754);
 //        System.out.println(Rev2(9754));
-        System.out.println(palin(123321));
+        System.out.println(palin(126721));
 //        System.out.println(sum);
     }
 
