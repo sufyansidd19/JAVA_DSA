@@ -135,6 +135,58 @@ public class LL {
         System.out.println("END");
     }
 
+//    Recursion reverse
+    private void Reverse(Node node){
+        if (node == tail){
+            head=tail;
+            return;
+    }
+        Reverse(node.next);
+        tail.next=node;
+        tail=node;
+        tail.next=null;
+
+
+    }
+    public void reverse() {
+        if (size < 2) {
+            return;
+        }
+
+        Node prev = null;
+        Node present = head;
+        Node next = present.next;
+
+        while (present != null) {
+            present.next = prev;
+            prev = present;
+            present = next;
+            if (next != null) {
+                next = next.next;
+            }
+        }
+        head = prev;
+    }
+
+    public static void main(String[] args) {
+        LL first = new LL();
+        LL second = new LL();
+
+        first.insertLast(1);
+        first.insertLast(3);
+        first.insertLast(5);
+
+        second.insertLast(1);
+        second.insertLast(2);
+        second.insertLast(9);
+        second.insertLast(14);
+
+        first.display();
+        first.reverse();
+        first.display();
+            
+    }
+
     private class Node {
         private int value;
         private Node next;
